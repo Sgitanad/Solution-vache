@@ -11,18 +11,17 @@
         <img id="imAi" src="{% static 'istockphoto-1083281918-612x612.jpg' %}" width="80px" height="80px" >
         <a class="aIm"  href="#acc" >Accueil</a>
         <a class="aIm"  href="#Adef" >definition</a>
-        <a class="aIm"  href="" >emplacement</a>
-        <a class="aIm"  href="" >problem</a>
-        <a class="aIm"  href="" >solution</a>
-        <a class="aIm"  href="" >inscription</a>
+        <a class="aIm"  href="#Aemp" >emplacement</a>
+        <a class="aIm"  href="#double" >problem</a>
+        <a class="aIm"  href="#double" >solution</a>
+        <a class="aIm"  href="#insc" >inscription</a>
     </nav>
 
      <header>
-        <h1 id="h1EA">marché de vache de ras jebel</h1>
+        <h1 id="h1EA">Marché de vache à Ras jebel</h1>
     </header>
 
     <article>
-
         <div id="Adef">
             <div id="def">
                 <h2 style="margin-left: 250px;">Définition</h2>
@@ -37,8 +36,7 @@
         </div>
     
         <div id="Aemp">
-            <iframe src="https://www.google.com/maps/place/%D8%B3%D9%88%D9%82+%D8%A7%D9%84%D8%AF%D9%88%D8%A7%D8%A8+%D8%A8%D8%B1%D8%A3%D8%B3+%D8%A7%D9%84%D8%AC%D8%A8%D9%84%E2%80%AD/@37.222026,10.1094443,770m/data=!3m2!1e3!4b1!4m6!3m5!1s0x12e2e9db03ec6ab3:0xb6dcd87c3ae180b!8m2!3d37.222026!4d10.1094443!16s%2Fg%2F11hk8bkrnn?entry=ttu&g_ep=EgoyMDI1MDEyMi4wIKXMDSoASAFQAw%3D%3D">
-            </iframe>
+            <img id="imaD" src="{% static 'mappp.png' %}" width="450px" height="220px" style="margin-left: 16%;" >
             <div id="emp">
                 <h2 style="margin-left: 170px;">Emplacement</h2>
                 <p id="empP">
@@ -46,7 +44,43 @@
                 </p>
             </div>
         </div>
+
+        <div id="double">
+            <div id="pro">
+                <h2 style="margin-left: 170px;">Problem</h2>
+                <p id="empP">
+                    À Ras Jebel, nous avons le plus grand marché de vaches de 
+                    Tunisie. C'est un endroit très important qui attire des centaines de 
+                    vendeurs et d'acheteurs de toute la Tunisie. Mais il a quelques 
+                    problèmes principalement :
+                    <ul>
+                        <li>être désorganisé. </li>
+                        <li>manquer de sécurité pour les vendeurs et les acheteurs. </li>
+                        <li>être mal surveillé par les autorités. </li>
+                        <li>être une perte de temps pour de nombreux éleveurs, car ils ne garantissent pas une vente.</li>
+                    </ul>
+                </p>
+            </div>
+            <div id="sol">
+                <h2 style="margin-left: 170px;">Solution</h2>
+                <p id="empP">
+                    Mon solution à ce sujet est de créer une application qui nous aidera à mieux organiser 
+                    ce problème à travers l'identifiant, les horaires et plus encore.
+                </p>
+            </div>
+        </div>
     </article>
+
+    <footer id="insc">
+        <form>
+            <h1 style="margin-left: 50px; color: #254336; margin: 0px; margin-bottom: 25px;">Inscription</h1>
+            <label>User name : </label><br>
+            <input type="text" class="inp" ><br>
+            <label>Mot de passe : </label><br>
+            <input type="text" class="inp" ><br>
+            <a href="{% url 'next' %}" class="but">Submit</a>
+        </form>
+    </footer>
 
 </body>
 </html>
@@ -112,7 +146,7 @@ header{
     padding: 10px;
     background-color: #6B8A7A;
     color: white;
-    margin-bottom: 25px;
+    margin-bottom: 0px;
 }
 #Adef{
     display: flex;
@@ -133,13 +167,78 @@ header{
     width: 35%;
     height: 200px;
     font-size: 20px;
-    margin-left: 10%;
+    margin-left: 25px;
     margin-top: 25px;
     border-radius: 10px;
     padding: 10px;
     background-color: #6B8A7A;
     color: white;
-    margin-bottom: 25px;
+    margin-bottom: 0px;
+}
+/*--------double----------*/
+#double{
+    display: flex;
+}
+/*--------problem----------*/
+#pro{
+    width: 35%;
+    font-size: 20px;
+    margin-left: 14%;
+    margin-top: 25px;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #254336;
+    color: white;
 }
 
+/*--------solution----------*/
+#sol{
+    width: 35%;
+    height: 160px;
+    font-size: 20px;
+    margin-left: 25px;
+    margin-top: 25px;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #254336;
+    color: white;
+}
+/*--------footer----------*/
+footer{
+    width: 100%;
+}
+form{
+    width: 40%;
+    font-size: 20px;
+    margin-left: 30%;
+    margin-top: 25px;
+    border-radius: 10px;
+    padding: 15px;
+    padding-left: 50px;
+    background-color: #6B8A7A;
+    color: white;
+    margin-bottom: 25px;
+}
+label{
+    font-weight: bold;
+    font-size: 25px;
+}
+.inp{
+    width: 400px;
+    height: 30px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+}
+.but{
+    width: 50px;
+    height: 20px;
+    color: black;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 5px;
+    font-size: 18px;
+    padding: 5px;
+    text-decoration: none;
+}
 </style>
