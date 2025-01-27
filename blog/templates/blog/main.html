@@ -1,0 +1,145 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main</title>
+</head>
+<body>
+    <nav id="acc">
+        <img id="imAi" src="{% static 'istockphoto-1083281918-612x612.jpg' %}" width="80px" height="80px" >
+        <a class="aIm"  href="#acc" >Accueil</a>
+        <a class="aIm"  href="#Adef" >definition</a>
+        <a class="aIm"  href="" >emplacement</a>
+        <a class="aIm"  href="" >problem</a>
+        <a class="aIm"  href="" >solution</a>
+        <a class="aIm"  href="" >inscription</a>
+    </nav>
+
+     <header>
+        <h1 id="h1EA">marché de vache de ras jebel</h1>
+    </header>
+
+    <article>
+
+        <div id="Adef">
+            <div id="def">
+                <h2 style="margin-left: 250px;">Définition</h2>
+                <p id="defP">
+                    Le marché de vaches à Ras Jebel, situé dans le gouvernorat de Bizerte, en Tunisie, est un lieu animé et emblématique de la région.
+                    Ce marché hebdomadaire attire des éleveurs, des agriculteurs et des commerçants venus de différentes localités pour acheter, vendre ou échanger du bétail, principalement des vaches.
+                    En plus de son rôle économique crucial, il reflète une tradition agricole profondément enracinée dans la culture locale. Les échanges y sont souvent marqués par des négociations dynamiques, dans une ambiance conviviale, où l'on discute également de pratiques d’élevage et des tendances du marché.
+                    Ce marché est non seulement un espace commercial, mais aussi un lieu social, renforçant les liens entre les communautés rurales environnantes et perpétuant un savoir-faire ancestral dans le domaine de l’élevage.
+                </p>
+            </div>
+            <img id="imaD" src="{% static 'Ras-jebel-blog-1024x576.png' %}" width="450px" height="340px" >
+        </div>
+    
+        <div id="Aemp">
+            <iframe src="https://www.google.com/maps/place/%D8%B3%D9%88%D9%82+%D8%A7%D9%84%D8%AF%D9%88%D8%A7%D8%A8+%D8%A8%D8%B1%D8%A3%D8%B3+%D8%A7%D9%84%D8%AC%D8%A8%D9%84%E2%80%AD/@37.222026,10.1094443,770m/data=!3m2!1e3!4b1!4m6!3m5!1s0x12e2e9db03ec6ab3:0xb6dcd87c3ae180b!8m2!3d37.222026!4d10.1094443!16s%2Fg%2F11hk8bkrnn?entry=ttu&g_ep=EgoyMDI1MDEyMi4wIKXMDSoASAFQAw%3D%3D">
+            </iframe>
+            <div id="emp">
+                <h2 style="margin-left: 170px;">Emplacement</h2>
+                <p id="empP">
+                    Ras Jebel (ou Ras El Djebel) est une ville côtière située dans le nord de la Tunisie, dans le gouvernorat de Bizerte. Elle est bordée par la mer Méditerranée, à environ 60 kilomètres au nord-est de Tunis et à environ 35 kilomètres au sud-est de Bizerte.
+                </p>
+            </div>
+        </div>
+    </article>
+
+</body>
+</html>
+
+<style>
+/*--------body----------*/
+body{
+    background-color: #fffaeb;
+}  
+/*--------nav----------*/
+nav{
+    display: flex;
+    width: 90%;
+    height: 100px;
+    margin-left: 5%;
+    background-color: #254336;
+    border-radius: 10px;
+}
+#imAi{
+    margin-top: 10px;
+    margin-left: 160px;
+    margin-right: 50px;
+    border-radius: 50%;
+}
+.aIm{
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    margin-left: 50px;
+    margin-top: 40px;
+    text-decoration: none;
+}.aIm:hover{
+    text-decoration: underline;
+    text-decoration-color: orange;
+}
+/*--------header----------*/
+header{
+    width: 80%;
+    height: 600px;
+    border-radius: 10px;
+    margin-left: 10%;
+    margin-top: -40px;
+    background-image: url("{% static 'GettyImages-108876870.jpg' %}");
+    background-position: center;
+    background-repeat: no-repeat; 
+}
+#h1EA{
+    width: 50%;
+    font-size: 80px;
+    color: white;
+    margin-left: 20px;
+    transform: translateY(200px);
+}
+/*--------articale----------*/
+/*--------definition----------*/
+#def{
+    width: 47%;
+    height: 320px;
+    font-size: 20px;
+    margin-left: 10%;
+    margin-top: 25px;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #6B8A7A;
+    color: white;
+    margin-bottom: 25px;
+}
+#Adef{
+    display: flex;
+}
+#imaD{
+    margin-top: 25px;
+    margin-left: 25px;
+    border-radius: 10px;
+}
+#defP{
+    width: 700px;
+}
+/*--------emplacement----------*/
+#Aemp{
+    display: flex;
+}
+#emp{
+    width: 35%;
+    height: 200px;
+    font-size: 20px;
+    margin-left: 10%;
+    margin-top: 25px;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #6B8A7A;
+    color: white;
+    margin-bottom: 25px;
+}
+
+</style>
