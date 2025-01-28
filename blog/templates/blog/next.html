@@ -6,6 +6,35 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Next</h1>
+    <header class="page-header">
+      <div class="container">
+          <h1><a href="/">Welcome to the liste</a></h1>
+      </div>
+    </header>
+    <a href="{% url 'post_new' %}">add</a>
+    <main class="container">
+        <div class="row">
+            <div class="col">
+            {% block content %}
+            {% endblock %}
+            </div>
+        </div>
+    </main>
 </body>
 </html>
+
+<style>
+    body{
+        padding-left: 100px;
+    }
+
+     #PO-new{
+        margin-left: 800px;
+     }
+
+    .col{
+        border: 2px solid black;
+        width: 400px;
+        height: 200px; 
+    }
+</style>
