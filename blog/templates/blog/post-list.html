@@ -1,0 +1,16 @@
+{% extends 'blog/next.html' %}
+
+{% block content %}
+    {% for post in posts %}
+        <article>
+            <div id="di1" >
+                <h2><a id="li1" href="{% url 'post_edit' pk=post.pk %}">{{ post.title }}</a></h2>
+                <time>published: {{ post.published_date }}</time>
+            </div>
+            <p>{{ post.text|linebreaksbr }}</p>
+            <a href="{% url 'post_after' %}" >
+                <input type="button" value="Buy" id="libu1" >
+            </a>    
+        </article>
+    {% endfor %}
+{% endblock %}

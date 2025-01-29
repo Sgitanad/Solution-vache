@@ -1,0 +1,12 @@
+{% extends 'blog/next.html' %}
+
+{% block content %}
+    <div id="PO-new">
+        <h2 id="NePo">New post</h2>
+        <form method="POST" class="post-form">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <a href="{% url 'next' %}"><button id="bute" type="submit" class="save btn btn-secondary">Save</button></a>
+        </form>
+    </div>
+{% endblock %}
