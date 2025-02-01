@@ -7,7 +7,6 @@ from django.shortcuts import redirect
 from django.http import HttpResponse
 from django.contrib.auth.models import AnonymousUser
 
-
 def main(request):
     return render(request, 'blog/main.html',)
 
@@ -16,7 +15,7 @@ def next(request):
 
 def post_list(request):
     posts = Post.objects.all()
-    return render(request, 'blog/post_list.html', {'posts': posts})
+    return render(request, 'blog/post-list.html', {'posts': posts})
 
 def post_detail(request, pk):
     post = get_object_or_404(Post, pk=pk)
